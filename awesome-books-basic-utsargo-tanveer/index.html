@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Awesome Books</title>
+</head>
+<body>
+  <main>
+    <div class="container top">
+      <header>
+        <h3>Awesome Books</h3>
+        <nav>
+          <ul>
+            <li><a onclick="showSec('list')">List</a> | </li>
+            <li><a onclick="showSec('form')">Add New</a> | </li>
+            <li><a onclick="showSec('contact')">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!--Date-->
+      <p id="date"></p>
+      <!--Switchable content-->
+      <div class="content" id="list">
+      <h2>Awesome Book List</h2>
+      <table id="book-list"></table>
+      <p id="empty-message">The list is empty. <strong><a onclick="showSec('form')">Add some books</a></strong>.</p>
+  </div>
+    <div class="content d-none" id="add-book">
+    <h2>Add a book</h2>
+    <div id="form" class="form">
+        <form name="book-form" action="#" class="input-form" id="book-form" onsubmit="return validateForm()" method="post">
+          <input id="book-title" type="text" placeholder="Title (required)" name="title" required><br>
+          <input id="book-author" type="text" placeholder="Author (required)" name="author" required><br>
+          <p id="error"></p>
+          <p id="success"></p>
+          <button id="add-btn" type="button">Add</button>
+        </form>
+      </div>
+    </div>
+    <div class="content d-none" id="contact">
+      <h2>Contact Information</h2>
+      <p>Do you have any question or you just want to say hello?<br>You can reach out to us!</p>
+      <ul>
+        <li>Our Email: mail@mail.com</li>
+        <li>Our Phone Number: 00339-880-978</li>
+        <li>Our Adress: House, Street, Zip-00000</li>
+      </ul>
+    </div>
+   
+    </div>
+    
+    <!-- footer -->
+    <footer class="container">
+      <p class="footer-txt"><span class="copy-left">&#127279;</span> All contents are copylefted. You can find the the source on <strong><a href="https://github.com/portfolio-roy/awesome-books-basic-utsargo-tanveer">Github</a></strong></p>
+    </footer>
+    </main>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
